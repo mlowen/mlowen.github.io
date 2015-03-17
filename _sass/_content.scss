@@ -1,0 +1,47 @@
+.row > .content {
+	article {
+		header {
+			a:hover { text-decoration: none; }
+
+			h1 { font-size: 40px; }
+			time {
+				color: $light-text-colour;
+				font-size: $minor-font-size;
+			}
+		}
+
+		h1 { font-size: 30px; }
+		h2 { font-size: 26px; }
+		h3 { font-size: 20px; }
+	}
+
+	hr { border-color: #C3C7CA; }
+
+	> .recent {
+		display: flex;
+
+		ul { margin-bottom: 30px; }
+
+		footer {
+			font-size: $minor-font-size;
+			text-align: right;
+
+			position: absolute;
+			bottom: 0;
+			right: 0;
+
+			a { margin-right: 10px; }
+		}
+	}
+
+	> footer:last-child {
+		color: $light-text-colour;
+
+		font-size: $minor-font-size;
+		font-style: italic;
+		text-align: center;
+
+		margin-top: 50px;
+		margin-bottom: 15px;
+	}
+}

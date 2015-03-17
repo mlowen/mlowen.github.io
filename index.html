@@ -2,20 +2,20 @@
 layout: default
 ---
 
-<div class="home">
+<article>
+	<header>
+		<time datetime="{{ site.categories.article.first.date | date: "%Y-%m-%d" }}" class="pull-right">
+			{{ site.categories.article.first.date | date: "%d %B %Y" }}
+		</time>
 
-  <h1 class="page-heading">Posts</h1>
+		<a href="{{ site.categories.article.first.url }}">
+			<h1>Latest Article: {{ site.categories.article.first.title }}</h1>
+		</a>
+	</header>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	<div class="content">
+		{{ site.categories.article.first.content }}
+	</div>
+</article>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-</div>
+<hr />

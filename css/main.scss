@@ -7,12 +7,18 @@
 
 $dark-colour: #20709f;
 $light-colour: #f4f2f1;
+$hover-colour: #a2dcf4;
+
 $collapse-point: 992px;
 $transition-duration: 0.4s;
+
+$light-text-colour: #77868F;
+$minor-font-size: 14px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 	"base",
 	"nav",
+	"content",
 	"syntax-highlighting"
 ;

@@ -48,14 +48,11 @@
 			li { padding: 5px 0; }
 
 			a {
-				-webkit-transition: color $transition-duration;
-				-moz-transition: color $transition-duration;
-				-o-transition: color $transition-duration;
-				transition: color $transition-duration;
+				
 
 				color: #fff;
 
-				&:hover { color: #87BEED; }
+				&:hover { color: $hover-colour; }
 			}
 		}
 	}

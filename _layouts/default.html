@@ -2,20 +2,20 @@
 
 <html lang="en">
 
-    {% include head.html %}
+	{% include head.html %}
 
-    <body class="fluid-container">
-        <div class="row">
-            {% include header.html %}
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				{% include header.html %}
 
-            <div class="page-content">
-                <div class="wrapper">
-                    {{ content }}
-                </div>
-            </div>
+				<div class="content col-lg-9 col-lg-offset-3 col-md-8 col-md-offset-4">
+					{{ content }}
 
-            {% include footer.html %}
-        </div>
-    </body>
+					{% include footer.html %}
+				</div>
+			</div>
+		</div>
+	</body>
 
 </html>
