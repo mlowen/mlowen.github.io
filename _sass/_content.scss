@@ -18,17 +18,13 @@
 	hr { border-color: #C3C7CA; }
 
 	> .recent {
-		display: flex;
+		h2 { margin-top: 0; }
 
 		ul { margin-bottom: 30px; }
 
 		footer {
 			font-size: $minor-font-size;
 			text-align: right;
-
-			position: absolute;
-			bottom: 0;
-			right: 0;
 
 			a { margin-right: 10px; }
 		}
@@ -43,5 +39,17 @@
 
 		margin-top: 50px;
 		margin-bottom: 15px;
+	}
+}
+
+@media (min-width: $collapse-point) {
+	.row > .content > .recent {
+		display: flex;
+
+		footer {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
 	}
 }

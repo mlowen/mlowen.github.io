@@ -19,3 +19,33 @@ layout: default
 </article>
 
 <hr />
+
+<div class="recent row">
+	<div class="col-md-6">
+		<header><h2>Recent articles</h2></header>
+
+		<ul>
+			{% for article in site.categories.article offset: 1 limit: 5 %}
+				<li><a href="{{ article.url }}">{{ article.title }}</a></li>
+			{% endfor %}
+		</ul>
+
+		<footer>
+			<a href="/articles">read more &hellip;</a>
+		</footer>
+	</div>
+
+	<div class="col-md-6">
+		<header><h2>Recent journal entries</h2></header>
+
+		<ul>
+			{% for journal in site.categories.journal limit: 5 %}
+				<li><a href="{{ journal.url }}">{{ journal.title }}</a></li>
+			{% endfor %}
+		</ul>
+
+		<footer>
+			<a href="/journal">read more &hellip;</a>
+		</footer>
+	</div>
+</div>
