@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  "Welcome to the new mlowen.com"
 date:   2013-09-20
 categories: article

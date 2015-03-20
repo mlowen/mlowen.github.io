@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  "Adventures with CommonMark"
 date:   2014-12-07
 categories: article

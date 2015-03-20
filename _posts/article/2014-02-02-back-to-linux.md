@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  "Back to Linux"
 date:   2014-02-02
 categories: article

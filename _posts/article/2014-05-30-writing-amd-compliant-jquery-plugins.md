@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title:  "Writing AMD compliant jQuery plugins"
 date:   2014-05-30
 categories: article
