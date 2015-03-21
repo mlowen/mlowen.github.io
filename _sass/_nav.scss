@@ -1,9 +1,6 @@
 .site-nav {
 	background-color: $dark-colour;
-
 	padding-top: 100px;
-	position: fixed;
-	height: 100%;
 
 	a {
 		color: $light-colour;
@@ -28,18 +25,7 @@
 	nav {
 		text-align: center;
 
-		&.social {
-			li { display: inline-block; }
-			a {
-				-webkit-transition: opacity $transition-duration;
-				-moz-transition: opacity $transition-duration;
-				-o-transition: opacity $transition-duration;
-				transition: opacity $transition-duration;
-
-				opacity: 0.6;
-				&:hover { opacity: 1; }
-			}
-		}
+		&.social li { display: inline-block; }
 
 		&.site {
 			margin-top: 50px;
@@ -51,12 +37,26 @@
 				li { padding: 5px 0; }
 			}
 
+			a:hover { color: $hover-colour; }
+		}
+	}
+}
+
+@media (min-width: $collapse-point) {
+	.site-nav {
+		position: fixed;
+		height: 100%;
+
+		nav.social {
 			a {
+				-webkit-transition: opacity $transition-duration;
+				-moz-transition: opacity $transition-duration;
+				-o-transition: opacity $transition-duration;
+				transition: opacity $transition-duration;
 
+				opacity: 0.6;
 
-				color: #fff;
-
-				&:hover { color: $hover-colour; }
+				&:hover { opacity: 1; }
 			}
 		}
 	}
@@ -69,11 +69,6 @@
 		padding-top: 55px;
 		padding-bottom: 50px;
 
-		nav {
-			&.social {
-				li { padding: 0 3px; }
-				a { opacity: 1; }
-			}
-		}
+		nav.social li { padding: 0 3px; }
 	}
 }
