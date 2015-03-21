@@ -1,0 +1,30 @@
+---
+layout: default
+title: Articles
+---
+
+<h1>Articles</h1>
+
+<div class="archive">
+	{% for article in site.categories.article %}
+		{% capture date %}{{ article.date }}{% endcapture %}
+		{% capture this_year %}{{ date | date: "%Y" }}{% endcapture %}
+
+		{% unless year == this_year %}
+			{% assign year = this_year %}
+			{% unless forloop.first %}
+				</ul>
+				<hr />
+			{% endunless %}
+
+			<h2 class="year">{{ date | date: "%Y" }}</h2>
+			<ul>
+		{% endunless %}
+
+		<li><a href="{{article.url}}"><h3>{{article.title}}</h3></a></li>
+
+		{% if forloop.last %}
+			</ul>
+		{% endif %}
+	{% endfor %}
+</div>

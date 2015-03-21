@@ -39,6 +39,12 @@
 
 		margin: 20px 0;
 	}
+
+	.archive {
+		ul {
+			list-style-type: none;
+		}
+	}
 }
 
 @media (min-width: $collapse-point) {
