@@ -1,0 +1,4 @@
+---
+layout: null
+---
+{% assign posts = site.categories.journal %}{% include feed.xml %}
