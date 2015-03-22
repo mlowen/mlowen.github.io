@@ -16,6 +16,14 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			(function() {
+				document.getElementsByClassName('toggler')[0].addEventListener('click', function(e) {
+					e.preventDefault();
+					document.getElementsByClassName('site')[0].classList.toggle('active');
+				});
+			})();
+		</script>
 	</body>
 
 </html>
