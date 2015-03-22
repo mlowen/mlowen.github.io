@@ -1,10 +1,11 @@
 # Site settings
 title: Mike Lowen
-url: "http://mike.lowen.co.nz" # the base hostname & protocol for your site
+url: "http://mike.lowen.co.nz"
+
+highlighter: rouge
 
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
 
 timezone: Pacific/Auckland
 
