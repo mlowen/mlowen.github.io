@@ -2,12 +2,14 @@
 title: Mike Lowen
 url: "http://mike.lowen.co.nz" # the base hostname & protocol for your site
 
-# Build settings
-highlighter: rouge
-markdown: redcarpet
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink"]
+timezone: Pacific/Auckland
 
 permalink: /:categories/:year/:month/:day/:title/
 disqus_shortname: mikelowen
+
+safe: true
+lsi: false
