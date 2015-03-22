@@ -2,7 +2,7 @@
 title: Mike Lowen
 url: "http://mike.lowen.co.nz"
 
-highlighter: rouge
+highlighter: pygments
 
 kramdown:
   input: GFM
