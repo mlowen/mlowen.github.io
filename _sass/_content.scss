@@ -4,9 +4,12 @@
 			a:hover { text-decoration: none; }
 
 			h1 { font-size: 40px; }
-			time {
-				color: $light-text-colour;
-				font-size: $minor-font-size;
+
+			.meta {
+				float: right;
+				text-align: right;
+
+				time { color: $light-text-colour; }
 			}
 		}
 

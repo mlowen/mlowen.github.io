@@ -2,19 +2,25 @@
 layout: default
 ---
 
+{% assign first = site.categories.article.first %}
+
 <article>
 	<header>
-		<time datetime="{{ site.categories.article.first.date | date: "%Y-%m-%d" }}" class="pull-right">
-			{{ site.categories.article.first.date | date: "%d %B %Y" }}
-		</time>
+		<div class="meta">
+			<time datetime="{{ first.date | date: "%Y-%m-%d" }}" class="pull-right">
+				{{ first.date | date: "%d %B %Y" }}
+			</time><br />
 
-		<a href="{{ site.categories.article.first.url }}">
-			<h1>Latest Article: {{ site.categories.article.first.title }}</h1>
+			<a href="{{ first.url }}#disqus_thread" data-disqus-identifier="{{ first.url }}">Comments</a>
+		</div>
+
+		<a href="{{ first.url }}">
+			<h1>Latest Article: {{ first.title }}</h1>
 		</a>
 	</header>
 
 	<div class="content">
-		{{ site.categories.article.first.content }}
+		{{ first.content }}
 	</div>
 </article>
 

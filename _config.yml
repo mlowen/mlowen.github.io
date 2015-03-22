@@ -1,10 +1,6 @@
 # Site settings
 title: Mike Lowen
-description: ""
-baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://mike.lowen.co.nz" # the base hostname & protocol for your site
-twitter_username: mike_lowen
-github_username:  mlowen
 
 # Build settings
 highlighter: rouge
@@ -14,5 +10,4 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink"]
 
 permalink: /:categories/:year/:month/:day/:title/
-paginate: 20
-paginate_path: "page/:num"
+disqus_shortname: mikelowen
