@@ -2,11 +2,11 @@
 title: Mike Lowen
 url: "http://mike.lowen.co.nz"
 
+markdown: redcarpet
 highlighter: pygments
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables" ]
 
 timezone: Pacific/Auckland
 
