@@ -1,4 +1,4 @@
 ---
 layout: null
 ---
-{% assign posts = site.categories.article %}{% include feed.xml %}
+{% assign posts = site.categories.article %}{% assign path = "/articles/feed" %}{% include feed.xml %}
