@@ -17,11 +17,11 @@ CommonMark.Editor is a basic web editor for [CommonMark](http://commonmark.org/)
 
 Glint is a micro framework for command line applications, which allows the developer to create command driven applications which I was unable to replicate with [argparse](http://docs.python.org/dev/library/argparse.html).
 
-## Knockout.Router
+## Knockout-SinglePage
 
-*Javascript, [GitHub](https://github.com/mlowen/Knockout.Router)*
+*Javascript, [GitHub](https://github.com/mlowen/knockout-singlepage)*
 
-Knockout.Router is an extension to the [Knockout javascript library](http://knockoutjs.com/) which leverages the [component](http://knockoutjs.com/documentation/component-overview.html) functionality that was introduced in v3.2 to enable single page applications.
+Knockout-Singlepage is an extension to the [Knockout javascript library](http://knockoutjs.com/) which leverages the [component](http://knockoutjs.com/documentation/component-overview.html) functionality that was introduced in v3.2 to enable single page applications.
 
 ## Knockout.CommonMark
 
