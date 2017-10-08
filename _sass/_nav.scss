@@ -33,6 +33,7 @@
 	.site-nav {
 		position: fixed;
 		height: 100%;
+		overflow-y: scroll;
 
 		.toggler { display: none; }
 
