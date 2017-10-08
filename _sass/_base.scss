@@ -1,9 +1,35 @@
-a:hover {
-	-webkit-transition: color $transition-duration;
-	-moz-transition: color $transition-duration;
-	-o-transition: color $transition-duration;
-	transition: color $transition-duration;
+* {
+	box-sizing: border-box;
+}
 
+body {
+	margin: 0;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+h1 {
+	margin: 0 0 10px;
+}
+
+a {
 	text-decoration: none;
-	color: $hover-colour;
+	color: #337ab7;
+
+	&:visited {
+		color: #337ab7;
+	}
+
+	&:hover {
+		-webkit-transition: color $transition-duration;
+		-moz-transition: color $transition-duration;
+		-o-transition: color $transition-duration;
+		transition: color $transition-duration;
+
+		text-decoration: none;
+		color: $hover-colour;
+	}
+}
+
+code {
+	font-family: 'Inconsolata', monospace;
 }

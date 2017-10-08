@@ -1,6 +1,7 @@
 .site-nav {
 	background-color: $dark-colour;
 	padding-top: 100px;
+	width: 25%;
 
 	a {
 		color: $light-colour;
@@ -15,6 +16,8 @@
 			font-size: 50px;
 			font-weight: bold;
 		}
+
+		img { border-radius: 50%; }
 	}
 
 	ul {

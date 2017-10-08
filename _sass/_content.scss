@@ -1,4 +1,8 @@
-.row > .content {
+.content {
+	margin-left: 25%;
+	width: 50%;
+	padding: 20px 15px;
+
 	article {
 		header {
 			a:hover { text-decoration: none; }
@@ -18,7 +22,7 @@
 		h3 { font-size: 20px; }
 	}
 
-	hr { border-color: #C3C7CA; }
+	hr { border-color: #f5f5f5; }
 
 	> .recent {
 		h2 { margin-top: 0; }
