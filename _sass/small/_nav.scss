@@ -1,0 +1,81 @@
+.site-nav {
+  position: relative;
+  height: auto;
+  padding-top: 55px;
+  padding-bottom: 50px;
+
+  nav {
+    &.social li { padding: 0 3px; }
+
+    &.mobile-nav-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      height: 50px;
+      width: 100%;
+
+      z-index: 200;
+
+      text-align: left;
+      background-color: $dark-colour;
+
+      .site {
+        height: 100%;
+        width: 250px;
+        margin-left: -195px;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+
+        .toggler {
+          margin: 10px 10px 0 0;
+          float: right;
+          background: transparent;
+          border: 1px solid $light-colour;
+          border-radius: 4px;
+
+          .bar {
+            display: block;
+            border-radius: 1px;
+            height: 2px;
+            width: 22px;
+            background-color: $light-colour;
+            margin-top: 5px;
+
+            &:last-child { margin-bottom: 5px; }
+          }
+        }
+
+        &.active {
+          background-color: $dark-colour;
+          box-shadow: 0 0 1em #000;
+          margin-left: 0;
+
+          ul, hr { display:block; }
+        }
+
+        ul {
+          display: none;
+          clear: both;
+
+          a {
+            display: block;
+            font-size: 18px;
+            padding: 5px 10px;
+          }
+        }
+
+        hr {
+          display: none;
+          margin: 20px 10px;
+        }
+      }
+    }
+  }
+}

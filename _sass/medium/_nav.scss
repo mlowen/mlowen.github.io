@@ -1,0 +1,38 @@
+.site-nav {
+  position: fixed;
+  height: 100%;
+  overflow-y: scroll;
+  width: 33.33%;
+
+  .toggler { display: none; }
+
+  nav {
+    &.social {
+      a {
+        -webkit-transition: opacity $transition-duration;
+        -moz-transition: opacity $transition-duration;
+        -o-transition: opacity $transition-duration;
+        transition: opacity $transition-duration;
+
+        opacity: 0.6;
+
+        &:hover { opacity: 1; }
+      }
+    }
+
+    .site {
+      margin-top: 50px;
+      font-size: 18px;
+
+      ul {
+        margin-bottom: 50px;
+
+        li { padding: 5px 0; }
+      }
+
+      hr { display: none; }
+
+      a:hover { color: $hover-colour; }
+    }
+  }
+}
