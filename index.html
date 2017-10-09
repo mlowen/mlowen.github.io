@@ -7,7 +7,7 @@ layout: default
 <article>
 	<header>
 		<div class="meta">
-			<time datetime="{{ first.date | date: "%Y-%m-%d" }}" class="pull-right">
+			<time datetime="{{ first.date | date: "%Y-%m-%d" }}">
 				{{ first.date | date: "%d %B %Y" }}
 			</time><br />
 
@@ -26,8 +26,8 @@ layout: default
 
 <hr />
 
-<div class="recent row">
-	<div class="col-md-6">
+<div class="recent">
+	<div>
 		<header><h2>Recent articles</h2></header>
 
 		<ul>
@@ -41,7 +41,7 @@ layout: default
 		</footer>
 	</div>
 
-	<div class="col-md-6">
+	<div>
 		<header><h2>Recent journal entries</h2></header>
 
 		<ul>
