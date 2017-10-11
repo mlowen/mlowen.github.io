@@ -40,18 +40,4 @@ layout: default
 			<a href="/articles">more &hellip;</a>
 		</footer>
 	</div>
-
-	<div>
-		<header><h2>Recent journal entries</h2></header>
-
-		<ul>
-			{% for journal in site.categories.journal limit: 5 %}
-				<li><a href="{{ journal.url }}">{{ journal.title }}</a></li>
-			{% endfor %}
-		</ul>
-
-		<footer>
-			<a href="/journal">more &hellip;</a>
-		</footer>
-	</div>
 </div>
