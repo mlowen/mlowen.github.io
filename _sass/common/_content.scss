@@ -8,10 +8,10 @@
 			h1 { font-size: 40px; }
 
 			.meta {
-				float: right;
-				text-align: right;
-
+				font-size: 0.8em;
+				
 				time { color: $light-text-colour; }
+				> .comments { float: right; }
 			}
 		}
 
@@ -26,13 +26,6 @@
 		h2 { margin-top: 0; }
 
 		ul { margin-bottom: 30px; }
-
-		footer {
-			font-size: $minor-font-size;
-			text-align: right;
-
-			a { margin-right: 10px; }
-		}
 	}
 
 	> footer:last-child {
@@ -42,7 +35,7 @@
 		font-style: italic;
 		text-align: center;
 
-		margin: 20px 0;
+		margin: 20px 0 10px;
 	}
 
 	.archive {

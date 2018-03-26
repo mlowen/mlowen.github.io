@@ -6,17 +6,17 @@ layout: default
 
 <article>
 	<header>
-		<div class="meta">
-			<time datetime="{{ first.date | date: "%Y-%m-%d" }}">
-				{{ first.date | date: "%d %B %Y" }}
-			</time><br />
-
-			<a href="{{ first.url }}#disqus_thread" data-disqus-identifier="{{ first.url }}">Comments</a>
-		</div>
-
 		<a href="{{ first.url }}">
 			<h1>Latest Article: {{ first.title }}</h1>
 		</a>
+
+		<div class="meta">
+			<time datetime="{{ first.date | date: "%Y-%m-%d" }}">
+				{{ first.date | date: "%d %B %Y" }}
+			</time>
+
+			<a class="comments" href="{{ first.url }}#disqus_thread" data-disqus-identifier="{{ first.url }}">Comments</a>
+		</div>
 	</header>
 
 	<div>
@@ -35,9 +35,5 @@ layout: default
 				<li><a href="{{ article.url }}">{{ article.title }}</a></li>
 			{% endfor %}
 		</ul>
-
-		<footer>
-			<a href="/articles">more &hellip;</a>
-		</footer>
 	</div>
 </div>
