@@ -9,10 +9,18 @@
 
 			.meta {
 				font-size: 0.8em;
-				
+
 				time { color: $light-text-colour; }
 				> .comments { float: right; }
 			}
+		}
+
+		img {
+			border: 1px solid #555;
+			margin-right: auto;
+			margin-left: auto;
+			display: block;
+			box-shadow: 3px 3px 20px 1px #bbb;
 		}
 
 		h1 { font-size: 30px; }

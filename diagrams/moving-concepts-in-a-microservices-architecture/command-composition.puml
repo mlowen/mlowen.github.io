@@ -1,0 +1,25 @@
+@startuml Command Composition
+
+    actor "Client"
+    participant "Service A"
+    participant "Service B"
+    participant "Service C"
+
+    "Client" -> "Service A": GET /service-a/concept/id
+
+    activate "Service A"
+        "Service A" -> "Service B": GET /service-b/sub-concept-1/id
+        activate "Service B"
+            "Service B" -> "Service A": 200 OK: <object-1>
+        deactivate "Service B"
+
+        "Service A" -> "Service C": GET /service-c/sub-concept-2/id
+        activate "Service C"
+            "Service C" -> "Service A": 200 OK: <object-2>
+        deactivate "Service C"
+
+        "Service A" -> "Service A": Combine results
+        "Service A" -> "Client": 200 OK: <object>
+    deactivate "Service A"
+
+@enduml
