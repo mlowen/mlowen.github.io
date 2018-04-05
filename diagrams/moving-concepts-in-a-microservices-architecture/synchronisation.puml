@@ -1,0 +1,29 @@
+@startuml Event Synchronisation
+
+  participant "New Service"
+  participant "Original Service"
+  participant "Message Queue"
+
+  "New Service" --> "Message Queue": Publish new event
+
+  "Message Queue" --> "Original Service": Consume new event
+  activate "Original Service"
+    opt if data has not been seen before
+      "Original Service" -> "Original Service": Update self
+      "Original Service" --> "Message Queue": Publish Original event
+    end
+  deactivate "Original Service"
+
+  == ==
+
+  "Original Service" --> "Message Queue": Publish original event
+
+  "Message Queue" --> "New Service": Consume original event
+  activate "New Service"
+    opt if data has not been seen before
+      "New Service" -> "New Service": Update self
+      "New Service" --> "Message Queue": Publish new event
+    end
+  deactivate "New Service"
+
+@enduml

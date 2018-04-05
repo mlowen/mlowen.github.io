@@ -18,6 +18,8 @@ The main scenarios that we will be covering is when the is a 1-to-1 move of the 
 
 While this approach could fall under techniques that can be used to cater for events I wanted to address this option separately because all of the other approaches deal with moving the ownership of the concern to another service. In this approach you add the concern or concerns to their destination without removing it from the original service, you then keep the data stores of the different services synchronised by using the events from the different services to communicate changes.
 
+![](/images/moving-concerns-in-a-microservices-architecture/synchronisation.png)
+
 Personally I’m not a fan of this approach as it is effectively introduces dual mastery into your system and all of the complexity and issues of keeping two data repositories synchronised (e.g. what happens when one gets out of sync with the other or if one event breaks the other service?) and this only gets worse if you are splitting your concern in a 1-to-many fashion. In cases where I’ve seen something like this done I’ve found that it also leads to confusion amongst the developers in regards to which is the go forward option. The advantage of this approach is that compared to some of the others listed below the old service does not incur any run time coupling between the services as they do not need to be up at the same time.
 
 ## Commands
