@@ -9,8 +9,8 @@ For better or worse you've found yourself in the situation where the particular 
 
 This article is going to cover some of the techniques we can use when we find ourselves in this situation and for the purposes of this article the following I’m going to use the following definitions:
 
-* Commands - The synchronous communication for the service used when you want your service to do something, these are commonly mapped to the [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) actions offered out on a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) interface.
-* Events - The asynchronous communication for the service for when you want to notify the ecosystem that something has happened in the service (usually as a result of a command or another event). These are generally offered out over a messaging technology such as [RabbitMQ](https://www.rabbitmq.com/) or [Kafka](https://kafka.apache.org/).
+* **Commands** - The synchronous communication for the service used when you want your service to do something, these are commonly mapped to the [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) actions offered out on a [RESTful](https://en.wikipedia.org/wiki/Representational_state_transfer) interface.
+* **Events** - The asynchronous communication for the service for when you want to notify the ecosystem that something has happened in the service (usually as a result of a command or another event). These are generally offered out over a messaging technology such as [RabbitMQ](https://www.rabbitmq.com/) or [Kafka](https://kafka.apache.org/).
 
 I’ll be discussing techniques for tending to both of these styles of communication, the scenarios that we will be covering in terms of moving events are a 1-to-1 move where the concern is moving wholesale from one service to another and a 1-to-many move where the concern is being split into a set of smaller concerns which could be going to multiple different services.
 
@@ -44,14 +44,16 @@ In this approach the new service publishes both the event from the existing serv
 
 ![](/images/moving-concerns-in-a-microservices-architecture/event-multipublish.png)
 
-This approach works well when the concern
-
-This approach much like the redirect for commands work best when the concern it has been directly lifted and shifted between services. Some care does need to be taken when utilising this approach as if it is not a lift and shift there is the potential for leaking of concerns between services.
+This approach is best suited when the concern has been directly lifted and shifted or when the data can be transformed into the shape of the old event when a breaking change has been made. If the case where a breaking change has been made and additional data is needed to augment the services data in order to transform it into the original shape some care needs to be taken to ensure that you don't start leaking concerns between services.
 
 ### Republish
+
+In the case where the concern has been split amongst multiple services and you want to avoid the risk of leaking concerns between services you would be better off modifying the original service to listen to the events being published for the new concerns and then retrieving the data required from the other services needed to publish the original event.
 
 ![](/images/moving-concerns-in-a-microservices-architecture/event-republish.png)
 
 ## What next?
 
-The key takeaway from this article is that when moving concerns between services no matter what approach we take we will be left with some level of technical debt, which will need to be remedied in the future. What we need to focus on is the trade offs of the various approaches and how they fit with the constraints on your ecosystem.
+Now that the concern has been moved what are the next steps? No matter what approach you take there will be some level of technical debt incurred and at some point you need to retire the original commands and events. The simplest approach is to announce the deprecation of the concern and a date at which point it will be removed from the original service, putting the onus on the consumers of the concern. While at times this approach is appropriate it is not one that I particularly care for as this can lead to friction between yourself and the consumers due to potentially conflicting and competing priorities.
+
+Alternatively you can maintain the technical debt until usage of the original concern dissipates. In the case of commands (especially when using HTTP APIs) which are externally exposed this can be tricky as you may not be in control of all of the clients interacting with your services. What you should have hopefully is monitoring of the usage of your APIs which you can use, when the usage of the original endpoints drop below a certain threshold the endpoints can be removed. In the case of events you can hopefully raise a technical dept with each of the consumers of the event and once those pieces of work has been completed then remove the publication of the original event.
