@@ -16,7 +16,7 @@ The main scenarios that we will be covering is when the is a 1-to-1 move of the 
 
 ## Synchronisation
 
-While this approach could fall under techniques that can be used to cater for events I wanted to address this option separately because all of the other approaches deal with moving the ownership of the concern to another service. In this approach you add the concern or concerns to their destination without removing it from the original service, you then keep the data stores of the different services synchronised by using the events from the different services to communicate changes.
+While this approach could fall under techniques that can be used to cater for events I wanted to address this option separately because all of the other approaches deal with moving the ownership of the concern to another service. In this approach you add the concern or concerns to their destination without removing it from the original service, then the data store for each service is populated and kept in sync by consuming the events emitted by the other services.
 
 ![](/images/moving-concerns-in-a-microservices-architecture/synchronisation.png)
 
