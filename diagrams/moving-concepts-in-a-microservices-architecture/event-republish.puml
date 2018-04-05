@@ -1,0 +1,25 @@
+@startuml Event Republish
+
+  actor "Client"
+  participant "Service A"
+  participant "Service B"
+  participant "Original Service"
+  participant "Message Queue"
+
+  "Client" -> "Service A": Command
+  activate "Service A"
+    "Service A" --> "Message Queue": Publish new event
+  deactivate "Service A"
+
+  "Message Queue" --> "Original Service": Receive new event
+  activate "Original Service"
+
+    "Original Service" -> "Service B": Request data to augment
+    activate "Service B"
+      "Service B" -> "Original Service": Return data for augment
+    deactivate "Service B"
+
+    "Original Service" --> "Message Queue": Publish original event
+  deactivate "Original Service"
+
+@enduml

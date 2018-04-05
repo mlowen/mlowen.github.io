@@ -1,0 +1,14 @@
+@startuml Event Multipublish
+
+  actor "Client"
+  participant "Service"
+  participant "Message Queue"
+
+  "Client" -> "Service": Command
+
+  activate "Service"
+    "Service" --> "Message Queue": Publish new event
+    "Service" --> "Message Queue": Publish original event
+  deactivate "Service"
+
+@enduml
