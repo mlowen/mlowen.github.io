@@ -30,6 +30,16 @@
 		.article-content { text-align: justify; }
 	}
 
+	blockquote {
+		margin: 0;
+		background-color: #eee;
+		padding: 1em 40px 1em 25px;
+		border-left: 15px solid #ccc;
+		font-style: italic;
+
+		> p { margin: 0; }
+	}
+
 	> .recent {
 		h2 { margin-top: 0; }
 
