@@ -1,0 +1,18 @@
+@startuml
+
+  actor "Client"
+  participant "Service A"
+  participant "Service B"
+
+  "Client" -> "Service A": Command 1
+
+  activate "Service A"
+    "Service A" -> "Service B": Command 2
+    activate "Service B"
+      "Service B" -> "Service A": Result
+    deactivate "Service B"
+
+    "Service A" -> "Client": Result
+  deactivate "Service A"
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+  actor "Client"
+  participant "Service A"
+  participant "Service B"
+  participant "Message Queue"
+
+  "Client" -> "Service A": Command 1
+
+  activate "Service A"
+    "Service A" --> "Message Queue": Publish message
+    "Service A" -> "Client": Result
+  deactivate "Service A"
+
+  "Message Queue" --> "Service B": Receive message
+  "Service B" -> "Service B": Run process
+
+@enduml
