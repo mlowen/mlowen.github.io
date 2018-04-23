@@ -24,9 +24,11 @@ I thought we'd get this one out of the way first, there is always the option to 
 
 ## Synchronous APIs
 
-This approach sees your service interacting with the upstream dependencies synchronous APIs (e.g. RESTful API) on an as needed basis and is best used when you require data from your upstream service (which could be creating/updating/deleting its own concerns) to complete the transaction, in this situation this approach tends to be easier to implement than the equivalent asynchronous approach. The cost of it is that you incur runtime coupling between both of you services as such they both need to be running for your service to complete its transaction, the level of complexity within a service does increase when your service requires multiple upstream dependencies to modify their concerns, careful thought needs to be given to how to handle the situation where one of the dependencies fails.
+This approach sees your service interacting with the upstream dependencies synchronous APIs (e.g. RESTful API) on an as needed basis and is best used when you require data from your upstream service (which could be creating/updating/deleting its own concerns) to complete the transaction, in this situation this approach tends to be easier to implement than the equivalent asynchronous approach.
 
 ![](/images/autonomy-and-coupling-in-microservices/synchronous.png)
+
+The cost of it is that you incur runtime coupling between both of you services as such they both need to be running for your service to complete its transaction, the level of complexity within a service does increase when your service requires multiple upstream dependencies to modify their concerns, careful thought needs to be given to how to handle the situation where one of the dependencies fails.
 
 ### Graceful degradation
 
