@@ -128,7 +128,7 @@ if __name__ == '__main__':
     tornado.ioloop.IOLoop.current().start()
 ```
 
-The trade off with using this approach is there is no single place in cod that you can go to see all of the routes that are exposed by the application. I believe that having the fuller context with each route is worth the trade off. For those who still want to view all of the routes for an application they could do so using the python shell:
+The trade off with using this approach is there is no single place in code that you can go to see all of the routes that are exposed by the application. I believe that having the fuller context with each route is worth the trade off. For those who still want to view all of the routes for an application they could do so using the python shell:
 
 ![](/images/autoloading-handlers-in-tornado/view-routes.gif)
 

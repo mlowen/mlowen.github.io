@@ -1,0 +1,35 @@
+@startuml
+
+  participant "Client A"
+  participant "Client B"
+  participant "Client C"
+  participant "API"
+
+  "Client A" -> "API": GET /article/1
+  activate "API"
+    "API" -> "Client A": { "title": "foo", "content": "bar" }
+  deactivate "API"
+
+  activate "Client A"
+
+    "Client B" -> "API": GET /article/1
+    activate "API"
+      "API" -> "Client B": { "title": "foo", "content": "bar" }
+    deactivate "API"
+
+    activate "Client B"
+      "Client B" -> "Client B": Update title to baz
+      "Client B" -> "API": PUT If-Unmodified-Since: 2021-12-28T16:00, /article/1 { "title": "baz", "content": "bar" }
+      activate "API"
+        "API" -> "API": Update last modified date to 2021-12-28T16:05
+        "API" -> "Client B": Success
+      deactivate "API"
+    deactivate "Client B"
+
+    "Client A" -> "Client A": Update title to qux
+    "Client A" -> "API": PUT If-Unmodified-Since: 2021-12-28T15:50, /article/1 { "title": "qux", "content": "bar" }
+    activate "API"
+      "API" -> "Client A": Reject
+    deactivate "API"
+  deactivate "Client A"
+@enduml

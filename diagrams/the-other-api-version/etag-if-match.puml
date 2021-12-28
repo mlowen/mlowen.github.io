@@ -1,0 +1,35 @@
+@startuml
+
+  participant "Client A"
+  participant "Client B"
+  participant "Client C"
+  participant "API"
+
+  "Client A" -> "API": GET /article/1
+  activate "API"
+    "API" -> "Client A": E-Tag: 1, { "title": "foo", "content": "bar" }
+  deactivate "API"
+
+  activate "Client A"
+
+    "Client B" -> "API": GET /article/1
+    activate "API"
+      "API" -> "Client B": E-Tag: 1, { "title": "foo", "content": "bar" }
+    deactivate "API"
+
+    activate "Client B"
+      "Client B" -> "Client B": Update title to baz
+      "Client B" -> "API": PUT If-Match: 1, /article/1 { "title": "baz", "content": "bar" }
+      activate "API"
+        "API" -> "API": Update version to 2
+        "API" -> "Client B": Success
+      deactivate "API"
+    deactivate "Client B"
+
+    "Client A" -> "Client A": Update title to qux
+    "Client A" -> "API": PUT If-Match: 1, /article/1 { "title": "qux", "content": "bar" }
+    activate "API"
+      "API" -> "Client A": Reject
+    deactivate "API"
+  deactivate "Client A"
+@enduml
