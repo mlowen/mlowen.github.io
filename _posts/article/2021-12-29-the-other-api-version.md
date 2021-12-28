@@ -6,7 +6,7 @@ categories: article
 tags: REST, api, HTTP
 ---
 
-Versioning RESTful API endpoints sucks, there are a bunch of ways to do it all with different tradeoffs which are largely semantic and no real consensus on the "right" way to do it. Thinking about versioning endpoints brings to mind that Winston Churchill quote about democracy:
+Versioning RESTful API endpoints kind of sucks, there are a bunch of ways to do it all with different tradeoffs which are largely semantic and no real consensus on the "right" way to do it. Thinking about versioning endpoints brings to mind that Winston Churchill quote about democracy:
 
 > democracy is the worst form of government – except for all the others that have been tried.
 
