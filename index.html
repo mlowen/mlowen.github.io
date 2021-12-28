@@ -4,7 +4,7 @@ layout: default
 
 {% assign first = site.categories.article.first %}
 
-<article>
+<article class="front-page">
 	<header>
 		<a href="{{ first.url }}">
 			<h1>Latest Article: {{ first.title }}</h1>
@@ -18,10 +18,12 @@ layout: default
 			<a class="comments" href="{{ first.url }}#disqus_thread" data-disqus-identifier="{{ first.url }}">Comments</a>
 		</div>
 	</header>
-
 	<div class="article-content">
 		{{ first.content }}
 	</div>
+	<footer>
+		<a href="{{ first.url }}">Read more ...</a>
+	</footer>
 </article>
 
 <hr />

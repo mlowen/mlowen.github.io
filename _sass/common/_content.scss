@@ -29,6 +29,30 @@
 		h3 { font-size: 20px; }
 
 		.article-content { text-align: justify; }
+
+		&.front-page {
+			> * { position: relative; }
+
+			.article-content {
+				height: 700px;
+				overflow-y: hidden;
+
+				&::before {
+					content: '';
+					height: 200px;
+					width: 100%;
+					background: linear-gradient(180deg, transparent, #fff);;
+
+					position: absolute;
+					bottom: 0;
+				}
+			}
+
+			footer {
+				padding-top: 20px;
+				text-align: right;
+			}
+		}
 	}
 
 	blockquote {

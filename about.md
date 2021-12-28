@@ -6,9 +6,22 @@ permalink: /about/
 
 ## Me
 
-On the off chance you haven't guessed based on the content of this site so far I'm a coder, what you might not realise is that I hail from the little slice of paradise that is [Te Awamutu, New Zealand](https://en.wikipedia.org/wiki/Te_Awamutu) where I live with my wife and two boys. Currently I'm a Senior Solutions Architect, ~~the Acting Head of Architecture & Strategy~~, ~~Solutions Architect~~, ~~Senior Software Developer~~, ~~Software Developer~~ at [LIC](http://www.lic.co.nz/) building systems and devilvering value for our staff and New Zealand dairy farmers. Previously I've worked as a developer at [Torpedo7](http://www.torpedo7.co.nz/), [LayerX](http://layerx.co.nz/) and [The Nile](http://thenile.co.nz/) primarily doing web stuff in a variety of different technologies. If you want to know more about my professional life I would suggest checking out my [linkedIn profile](http://nz.linkedin.com/in/mikelowen).
+On the off chance you haven't guessed based on the content of this site so far I'm a coder hailing from the little slice of paradise that is [Te Awamutu, New Zealand](https://en.wikipedia.org/wiki/Te_Awamutu) where I live with my wife and two boys. Currently I'm the Principal Engineer of Product at [Flux Federation](http://fluxfederation.com/) building SaaS products for energy retailers. Previously I've been (in chronological order):
 
-In my spare time I'm one of those oddities that codes to relax as long as it isn't work related, as such my hard drive (and [GitHub profile](https://github.com/mlowen)) is littered with half finished projects. Outside of coding I like to think of myself as your average geek who enjoys tv, movies, novels (both graphic and prose), computer and board games. I'm also a fan of [rugby](http://en.wikipedia.org/wiki/Rugby_union) having played the game from when I was a we nipper until my mid-twenties. While no longer playing I still enjoy watching, following my regional team the [Chiefs](http://en.wikipedia.org/wiki/Chiefs_(rugby_union)) and the national team the [All Blacks](http://en.wikipedia.org/wiki/New_Zealand_national_rugby_union_team). Recently I've discovered the joy of [homebrewing](http://en.wikipedia.org/wiki/Homebrewing) and I'm currently at the beginning of the journey from kit brews to all grain brewing.
+* Senior Solutions Architect @ [LIC](http://www.lic.co.nz/)
+* Acting Head of Architecture & Strategy @ [LIC](http://www.lic.co.nz/)
+* Solutions Architect @ [LIC](http://www.lic.co.nz/)
+* Senior Software Developer @ [LIC](http://www.lic.co.nz/)
+* Software Developer @ [LIC](http://www.lic.co.nz/)
+* Intermediate Software Developer @ [Torpedo7](http://www.torpedo7.co.nz/)
+* Software Developer @ [LayerX](http://layerx.co.nz/)
+* Software Developer @ [The Nile](http://thenile.co.nz/)
+
+A lot of that time has been spent working on service based architectures, in particular around migrating from the exisitng monolithic systems. You can read more about my professional history at my [linkedIn profile](http://nz.linkedin.com/in/mikelowen).
+
+In my spare time I'm one of those oddities that codes to relax as long as it isn't work related, as such my hard drive (and [GitHub profile](https://github.com/mlowen)) is littered with half finished projects. Outside of coding I like to think of myself as your average geek who enjoys tv, movies, novels (both graphic and prose), Lego, video and board games. I'm also a fan of [rugby](http://en.wikipedia.org/wiki/Rugby_union) having played the game from when I was a we nipper until my mid-twenties. While no longer playing I still enjoy watching, following my regional team the [Chiefs](http://en.wikipedia.org/wiki/Chiefs_(rugby_union)) and the national team the [All Blacks](http://en.wikipedia.org/wiki/New_Zealand_national_rugby_union_team).
+
+I also take great joy in my hobbies [home brewing](http://en.wikipedia.org/wiki/Homebrewing) where I'm currently doing all grain brewing on [Ss brewtech](https://www.ssbrewtech.com/) equipment and making ice cream. 
 
 ## The site
 
