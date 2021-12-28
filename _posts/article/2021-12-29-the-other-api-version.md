@@ -30,4 +30,4 @@ The second approach utilises two HTTP headers [`ETag`](https://developer.mozilla
 
 ![](/images/the-other-api-version/etag-if-match.png)
 
-My preference is to use the `ETag` / `If-Match` combination as while it is a little more effort to implement it provides better protection against overwritting other clients changes to resources.
+My preference is to use the `ETag` / `If-Match` combination as while it is a little more effort to implement it provides better protection against overwritting other clients changes to resources. Regardless of how you approach versioning of data in your API I think that it's important that you **do** version the data. It provides clients integrating against your API a consistent and expected experience where they can rely on any data they submit not being accidentally overwritten.
