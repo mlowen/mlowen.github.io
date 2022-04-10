@@ -11,7 +11,7 @@ Recently a senior developer at work who is on the individual contributor (IC) pa
 
 A bit of context around the advice given the company I work for is a SaaS product company currently going on a journey to transform our monolith into a service based architecture, this does influence some of the advice and recommendations that have been given. 
 
-I'm the sort of person who learning style suits asorbing information from books and then using little projects (when I can) to apply that knowledge. As such I make recommendations of a few books throughout this post, these are all books that I have myself.
+I'm the sort of person whose learning style suits asorbing information from books and then using little projects (when I can) to apply that knowledge. As such I make recommendations of a few books throughout this post, these are all books that I have myself.
 
 ---
 
