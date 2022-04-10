@@ -34,6 +34,11 @@
 		h1 { font-size: 30px; }
 		h2 { font-size: 26px; }
 		h3 { font-size: 20px; }
+		hr {
+			border-style: dashed;
+			border-color: #bbb;
+			border-width: 1px;
+		}
 
 		.article-content { text-align: justify; }
 

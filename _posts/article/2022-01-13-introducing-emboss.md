@@ -3,14 +3,14 @@ layout: article
 title:  "Introducing Emboss"
 date:   2022-01-13
 categories: article
-tags: REST, api, HTTP, PDF, SaaS
+tags: REST, api, HTTP, PDF, SaaS, Emboss
 ---
 
 I would like to introduce a side project that I've been working on Emboss. Emboss provides a RESTful API to transform HTML & CSS into a PDF and a management UI on top of it. This is a tool that is intended to be integrated into a broader system that needs to generate dynamic PDFs. 
 
 Now the first thing your asking is why HTML? There are already libraries available for generating PDFs. That there is but those libraries generaly have their own [DSL](https://en.wikipedia.org/wiki/Domain-specific_language) that involves precisely specifying exactly where to draw things on a document that feel anything but user friendly, whereas HTML is a common technology that many people already know and have to work with. It also allows us to open up who can build the underlying PDF from developers to anyone who knows how to write HTML. 
 
-The next question you're probably asking is couldn't we just us [wkhtmltopdf](https://wkhtmltopdf.org/) and be done with it? Sure if you really want to, it's a good and popular tool, but do you really want to build more software that you have to maintain? Further below in the post I'm going to go through my current roadmap for Emboss that goes beyond the capabilities that go beyond what you get from a tool like wkhtmltopdf
+The next question you're probably asking is couldn't we just use [wkhtmltopdf](https://wkhtmltopdf.org/) and be done with it? Sure if you really want to, it's a good and popular tool, but do you really want to build more software that you have to maintain? Further below in the post I'm going to go through my current roadmap for Emboss that goes beyond the capabilities that go beyond what you get from a tool like wkhtmltopdf
 
 I'll do a longer post at some point but at a high level Emboss is comprised of an RESTful API using [Python](https://www.python.org/) & [Flask](https://flask.palletsprojects.com/), an application with a [React](https://reactjs.org/) + [Redux](https://redux.js.org/) client and a [Node](https://nodejs.org/) back end managing sessions and acting as a backend for frontend. It also utilises [Keycloak](https://www.keycloak.org/) as the identity provider. 
 
