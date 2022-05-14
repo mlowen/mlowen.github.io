@@ -4,7 +4,6 @@ title:  "Skills to focus on for staff+ roles"
 date:   2022-04-10
 categories: article
 tags: Individual contributor, IC, Staf+, career
-
 ---
 
 Recently a senior developer at work who is on the individual contributor (IC) path asked for advice as what they should be focussing on as they progress towards a staff+ role. Reflecting on the feedback I realised that with a bit of generalisation it would be useful for anyone looking to step up into a staff+ style of role. With the permission of the developer who requested the guidance here is an edited and slightly expanded version of the feedback I gave.
